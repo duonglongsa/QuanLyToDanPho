@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/controllers/HomeCotroller.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/services/StringService.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/ThuChiFrame/CacHoNoPhiVSJFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/NhanKhauManagerFrame/DangKyTamTruJFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/NhanKhauManagerFrame/AddNewPeopleJFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/infoViews/InfoJframe.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/NhanKhauManagePanel.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/ThuChiFrame/CacKhoanDongGopJFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/controllers/MainController.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/HomePagePanel.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/Bean/NhanKhauBean.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/Bean/HoKhauBean.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/Bean/DanhMucBean.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/controllers/ThongKePanelController.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/ThuChiPanel.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/NhanKhauManagerFrame/DangKyTamVangJFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/HoKhauManagerFrame/ThemMoiHoKhau.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/services/MysqlConnection.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/NhanKhauManagerFrame/KhaiTuJFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/HoKhauManagePanel.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/NhanKhauManagerFrame/TieuSuJFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/TimKiemPanel.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/services/HoKhauService.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/ThuChiFrame/NopTienJFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/quanlynhankhau/QuanLyNhanKhau.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/HoKhauManagerFrame/TachHoKhau.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/LoginUI.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/ThongKePanel.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/MainFrame.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/services/NhanKhauService.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/Bean/MemOfFamily.java</file>
+            <file>file:/F:/Documents/NetBeansProjects/QuanLyNhanKhau/src/views/ThuChiFrame/ThemKhoanDongGopJFrame.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -63,7 +63,7 @@ public class TieuSuJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(221, 213, 188));
 
         javax.swing.GroupLayout tieuSuPanelLayout = new javax.swing.GroupLayout(tieuSuPanel);
         tieuSuPanel.setLayout(tieuSuPanelLayout);

@@ -99,7 +99,7 @@ public class TachHoKhau extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(221, 213, 188));
 
         tableTopJpn.setBackground(new java.awt.Color(204, 204, 204));
 

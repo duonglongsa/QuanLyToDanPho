@@ -11,7 +11,7 @@ public class HomePagePanel extends javax.swing.JPanel {
     private HomeCotroller cotroller;
     public HomePagePanel() {
         initComponents();
-        this.cotroller = new HomeCotroller(tongNhanKhauLb, tongHoKhauLb, nhanKhauTamTruLb, nhanKhauTamVangLb);
+        this.cotroller = new HomeCotroller(tongNhanKhauLb, tongHoKhauLb, nhanKhauTamTruLb, nhanKhauTamVangLb, thuChiLabel);
         this.cotroller.setData();
     }
 
@@ -53,7 +53,7 @@ public class HomePagePanel extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        nhanKhauTamTruLb1 = new javax.swing.JLabel();
+        thuChiLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -336,9 +336,9 @@ public class HomePagePanel extends javax.swing.JPanel {
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Thu Chi:");
 
-        nhanKhauTamTruLb1.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
-        nhanKhauTamTruLb1.setForeground(new java.awt.Color(255, 255, 255));
-        nhanKhauTamTruLb1.setText("1000");
+        thuChiLabel.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        thuChiLabel.setForeground(new java.awt.Color(255, 255, 255));
+        thuChiLabel.setText("1000");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -352,7 +352,7 @@ public class HomePagePanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
-                    .addComponent(nhanKhauTamTruLb1))
+                    .addComponent(thuChiLabel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
@@ -362,7 +362,7 @@ public class HomePagePanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(nhanKhauTamTruLb1)
+                .addComponent(thuChiLabel)
                 .addContainerGap())
             .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -393,7 +393,7 @@ public class HomePagePanel extends javax.swing.JPanel {
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, Short.MAX_VALUE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -432,8 +432,8 @@ public class HomePagePanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel nhanKhauTamTruLb;
-    private javax.swing.JLabel nhanKhauTamTruLb1;
     private javax.swing.JLabel nhanKhauTamVangLb;
+    private javax.swing.JLabel thuChiLabel;
     private javax.swing.JLabel tongHoKhauLb;
     private javax.swing.JLabel tongHoKhauLb1;
     private javax.swing.JLabel tongNhanKhauLb;

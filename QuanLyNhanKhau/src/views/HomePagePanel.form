@@ -49,7 +49,7 @@
               <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jPanel3" pref="0" max="32767" attributes="0"/>
+                  <Component id="jPanel3" pref="94" max="32767" attributes="0"/>
                   <Component id="jPanel1" pref="94" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
@@ -532,7 +532,7 @@
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="nhanKhauTamTruLb1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="thuChiLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -545,7 +545,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="nhanKhauTamTruLb1" min="-2" max="-2" attributes="0"/>
+                  <Component id="thuChiLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Component id="jPanel10" alignment="1" max="32767" attributes="0"/>
@@ -586,7 +586,7 @@
             <Property name="text" type="java.lang.String" value="Thu Chi:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="nhanKhauTamTruLb1">
+        <Component class="javax.swing.JLabel" name="thuChiLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="48" style="1"/>

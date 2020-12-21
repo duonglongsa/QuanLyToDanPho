@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JLabel;
 import services.MysqlConnection;
+import services.ThuChiService;
 
 /**
  *
@@ -15,12 +16,16 @@ public class HomeCotroller {
     private JLabel tongHoKhauLb;
     private JLabel nhanKhauTamTruLb;
     private JLabel nhanKhauTamVangLb;
+    private JLabel thuChiLabel;
+    private ThuChiService thuChiService;
 
-    public HomeCotroller(JLabel tongNhanKhauLb, JLabel tongHoKhau, JLabel nhanKhauTamTruLb, JLabel nhanKhauTamVangLb) {
+    public HomeCotroller(JLabel tongNhanKhauLb, JLabel tongHoKhau, JLabel nhanKhauTamTruLb, JLabel nhanKhauTamVangLb, JLabel thuChiLabel) {
         this.tongNhanKhauLb = tongNhanKhauLb;
         this.tongHoKhauLb = tongHoKhau;
         this.nhanKhauTamTruLb = nhanKhauTamTruLb;
         this.nhanKhauTamVangLb = nhanKhauTamVangLb;
+        this.thuChiLabel  = thuChiLabel;
+        this.thuChiService = new ThuChiService();
     }
     
     public void setData() {
@@ -57,6 +62,13 @@ public class HomeCotroller {
                 this.nhanKhauTamVangLb.setText(String.valueOf(rs.getInt("tong")));
             }
             preparedStatement.close();
+            
+            int soLuongSuKien = this.thuChiService.tatCaLoaiPhi().size();
+            this.thuChiLabel.setText(Integer.toString(soLuongSuKien));
+            
+            
+            
+         
             
             connection.close();
         } catch (Exception e) {

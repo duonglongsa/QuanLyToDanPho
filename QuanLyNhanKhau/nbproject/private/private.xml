@@ -3,35 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/Bean/DanhMucBean.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/views/ThuChiPanel.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/views/ThuChiFrame/CacHoNoPhiVSJFrame.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/services/HoKhauService.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/Bean/MemOfFamily.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/ThongKePanelController.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/views/ThuChiFrame/NopTienJFrame.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/ThuChiController/CacHoNoPhiVeSinhController.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/views/ThuChiFrame/ThemKhoanDongGopJFrame.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/MainController.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/services/StringService.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/views/NhanKhauManagePanel.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/HoKhauManagerController/ChangeListPeopleController.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/views/NhanKhauManagerFrame/TieuSuJFrame.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/services/MysqlConnection.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/views/NhanKhauManagerFrame/AddNewPeopleJFrame.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/HomeCotroller.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/HoKhauManagerController/TachHoKhauController.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/Bean/NhanKhauBean.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/quanlynhankhau/QuanLyNhanKhau.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/HoKhauPanelController.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/HoKhauManagerController/ChuyenDiNoiKhacController.java</file>
-            <file>file:/F:/Documents/NetBeansProjects/QuanLyToDanPho/QuanLyNhanKhau/src/views/HomePagePanel.java</file>
-=======
+            <file>file:/D:/BTL_Projects/QuanLyToDanPho/QuanLyNhanKhau/src/services/MysqlConnection.java</file>
             <file>file:/D:/BTL_Projects/QuanLyToDanPho/QuanLyNhanKhau/src/services/ThuChiService.java</file>
-            <file>file:/D:/BTL_Projects/QuanLyToDanPho/QuanLyNhanKhau/src/utility/ClassTableModel.java</file>
+            <file>file:/D:/BTL_Projects/QuanLyToDanPho/QuanLyNhanKhau/src/models/KhoanThuVaHoKhau.java</file>
+            <file>file:/D:/BTL_Projects/QuanLyToDanPho/QuanLyNhanKhau/src/views/NhanKhauManagePanel.java</file>
             <file>file:/D:/BTL_Projects/QuanLyToDanPho/QuanLyNhanKhau/src/controllers/NhanKhauManagerPanelController.java</file>
->>>>>>> f9864bfce6a8ca21ad3d69c86112d82c8950b32b
+            <file>file:/D:/BTL_Projects/QuanLyToDanPho/QuanLyNhanKhau/src/models/HoKhauModel.java</file>
         </group>
     </open-files>
 </project-private>

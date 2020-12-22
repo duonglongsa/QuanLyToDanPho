@@ -20,33 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c939d2b-fa91-4c55-993a-47d731657ddf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuanLyNhanKhau/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/QuanLyNhanKhau/build/built-jar.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuanLyNhanKhau/build/classes/controllers/HomeCotroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuanLyNhanKhau/build/classes/controllers/HomeCotroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuanLyNhanKhau/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/QuanLyNhanKhau/nbproject/private/private.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuanLyNhanKhau/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/QuanLyNhanKhau/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/app.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/check-in.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/checked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/donation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/hotel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/house.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/increasing-stocks-graphic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/magnifying-glass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/money-07-128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/money-bag (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/money-bag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/moneyIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/multiple-users-silhouette.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/network.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/user-typing-using-typewriter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/QuanLyToDanPho/Icons/waste-separation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuanLyNhanKhau/src/quanlynhankhau/QuanLyNhanKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuanLyNhanKhau/src/quanlynhankhau/QuanLyNhanKhau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavaProjects/stock_app" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -88,5 +66,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1608595823248">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608595823248" />
+    <state x="549" y="132" key="RollbackChangesDialog" timestamp="1608569862742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="132" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608569862742" />
   </component>
 </project>

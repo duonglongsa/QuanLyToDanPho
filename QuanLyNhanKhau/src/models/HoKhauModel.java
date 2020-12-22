@@ -17,6 +17,30 @@ public class HoKhauModel {
     private String lyDoChuyen;
     private int nguoiThucHien;
 
+    public HoKhauModel() {
+    }
+
+    public HoKhauModel(int ID, String maHoKhau, int idChuHo, String diaChi) {
+        this.ID = ID;
+        this.maHoKhau = maHoKhau;
+        this.idChuHo = idChuHo;
+        this.diaChi = diaChi;
+    }
+
+    
+
+    public HoKhauModel(int ID, String maHoKhau, int idChuHo, String maKhuVuc, String diaChi, Date ngayLap, Date ngayChuyDi, String lyDoChuyen, int nguoiThucHien) {
+        this.ID = ID;
+        this.maHoKhau = maHoKhau;
+        this.idChuHo = idChuHo;
+        this.maKhuVuc = maKhuVuc;
+        this.diaChi = diaChi;
+        this.ngayLap = ngayLap;
+        this.ngayChuyDi = ngayChuyDi;
+        this.lyDoChuyen = lyDoChuyen;
+        this.nguoiThucHien = nguoiThucHien;
+    }
+
     public int getID() {
         return ID;
     }

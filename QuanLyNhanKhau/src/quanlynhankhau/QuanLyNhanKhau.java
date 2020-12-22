@@ -22,11 +22,6 @@ public class QuanLyNhanKhau {
         } catch (Exception e) {
         }
 
-        List<ThuChi> l = new ThuChiService().tatCaLoaiPhi();
-        for (ThuChi thuChi : l) {
-            System.out.print(thuChi);
-        }
-
         MainFrame mainFrame = new MainFrame();
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setResizable(false);

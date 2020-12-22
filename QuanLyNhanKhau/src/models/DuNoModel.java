@@ -1,6 +1,6 @@
 package models;
 
-public class DuNo {
+public class DuNoModel {
 	
 	private int maDuNo;
 	private int maPhi;
@@ -11,7 +11,7 @@ public class DuNo {
 	private String denNgay;
 	 
 	
-	public DuNo(int idHoKhau, int maDuNo, int maPhi, int tienNo, int tienDu, String tuNgay, String denNgay){
+	public DuNoModel(int idHoKhau, int maDuNo, int maPhi, int tienNo, int tienDu, String tuNgay, String denNgay){
 	    this.idHoKhau = idHoKhau;
 	    this.maDuNo = maDuNo;
 	    this.maPhi = maPhi;

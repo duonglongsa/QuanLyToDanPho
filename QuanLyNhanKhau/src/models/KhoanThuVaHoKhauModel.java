@@ -9,20 +9,20 @@ package models;
  *
  * @author Zbook 15 G3
  */
-public class KhoanThuVaHoKhau {
-    private KhoanThu khoanThu;
+public class KhoanThuVaHoKhauModel {
+    private KhoanThuModel khoanThu;
     private HoKhauModel hoKhau;
 
-    public KhoanThuVaHoKhau(KhoanThu khoanThu, HoKhauModel hoKhau) {
+    public KhoanThuVaHoKhauModel(KhoanThuModel khoanThu, HoKhauModel hoKhau) {
         this.khoanThu = khoanThu;
         this.hoKhau = hoKhau;
     }
 
-    public KhoanThu getKhoanThu() {
+    public KhoanThuModel getKhoanThu() {
         return khoanThu;
     }
 
-    public void setKhoanThu(KhoanThu khoanThu) {
+    public void setKhoanThu(KhoanThuModel khoanThu) {
         this.khoanThu = khoanThu;
     }
 

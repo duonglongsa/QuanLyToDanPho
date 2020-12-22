@@ -5,15 +5,15 @@
  */
 package services;
 
-import models.ThuChi;
-import models.KhoanThu;
+import models.ThuChiModel;
+import models.KhoanThuModel;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
-import models.DuNo;
-import models.DuNoVaHoKhau;
+import models.DuNoModel;
+import models.DuNoVaHoKhauModel;
 import models.HoKhauModel;
-import models.KhoanThuVaHoKhau;
+import models.KhoanThuVaHoKhauModel;
 
 /**
  * @author Hehe
@@ -27,12 +27,12 @@ public class ThuChiService {
         qs.queryNoResult(sql);
     }
     
-    public List<ThuChi> tatCaLoaiPhi() throws SQLException {
+    public List<ThuChiModel> tatCaLoaiPhi() throws SQLException {
         return qs.queryMultiple("SELECT * FROM `thu_chi`", (rs) -> {
             try {
-                return new ThuChi(rs.getInt(1), rs.getString(2), rs.getBoolean(3));
+                return new ThuChiModel(rs.getInt(1), rs.getString(2), rs.getBoolean(3));
             } catch (SQLException ex) {
-                return new ThuChi();
+                return new ThuChiModel();
             }
         });
     }
@@ -46,19 +46,19 @@ public class ThuChiService {
         return qs.querySingle("SELECT SUM(tienDaThu) FROM `khoan_thu` WHERE maPhi=1", (rs) -> rs.getLong(1));
     }
     
-    public List<DuNoVaHoKhau> timHoKhauDangNo(int loaiPhiId) throws SQLException {
+    public List<DuNoVaHoKhauModel> timHoKhauDangNo(int loaiPhiId) throws SQLException {
         return qs.queryMultiple("SELECT * FROM `du_no` JOIN `ho_khau` ON `du_no`.`idHoKhau`=`ho_khau`.`ID` WHERE `maPhi` = " + Integer.toString(loaiPhiId), (rs) -> {
-            DuNo no = new DuNo(rs.getInt(3), rs.getInt(1), rs.getInt(2), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7));
+            DuNoModel no = new DuNoModel(rs.getInt(3), rs.getInt(1), rs.getInt(2), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7));
             HoKhauModel hoKhau = new HoKhauModel(rs.getInt(3), rs.getString(9), rs.getInt(10), rs.getString(12));
-            return new DuNoVaHoKhau(hoKhau, no);
+            return new DuNoVaHoKhauModel(hoKhau, no);
         });
     }    
     
-    public List<KhoanThuVaHoKhau> timKhoanThuTheoHoKhau(int loaiPhiId) throws SQLException {
+    public List<KhoanThuVaHoKhauModel> timKhoanThuTheoHoKhau(int loaiPhiId) throws SQLException {
         return qs.queryMultiple("SELECT * FROM `khoan_thu` JOIN `ho_khau` ON `khoan_thu`.`idHoKhau`=`ho_khau`.`ID` WHERE `maPhi` = " + Integer.toString(loaiPhiId), (rs) -> {
-            KhoanThu thu = new KhoanThu(rs.getInt(3), rs.getInt(1), rs.getInt(2), rs.getInt(4), rs.getString(5));
+            KhoanThuModel thu = new KhoanThuModel(rs.getInt(3), rs.getInt(1), rs.getInt(2), rs.getInt(4), rs.getString(5));
             HoKhauModel hoKhau = new HoKhauModel(rs.getInt(6), rs.getString(7), rs.getInt(8), rs.getString(10));
-            return new KhoanThuVaHoKhau(thu, hoKhau);
+            return new KhoanThuVaHoKhauModel(thu, hoKhau);
         });
     }
     

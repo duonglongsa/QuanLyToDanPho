@@ -1,6 +1,6 @@
 package quanlynhankhau;
 
-import models.ThuChi;
+import models.ThuChiModel;
 import services.ThuChiService;
 import views.MainFrame;
 

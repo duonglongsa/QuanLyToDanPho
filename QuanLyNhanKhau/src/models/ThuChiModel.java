@@ -1,18 +1,18 @@
 package models;
 
-public class ThuChi {
+public class ThuChiModel {
 	private int maThuChi;
 	private String tenLoaiPhi;
 	private boolean batBuoc;
 	
 	
-	public ThuChi(int maThuChi, String tenLoaiPhi, boolean batBuoc) {
+	public ThuChiModel(int maThuChi, String tenLoaiPhi, boolean batBuoc) {
 		this.maThuChi = maThuChi;
 		this.tenLoaiPhi = tenLoaiPhi;
 		this.batBuoc = batBuoc;
 	}
 
-	public ThuChi() {
+	public ThuChiModel() {
 	}
 
 	public int getMaThuChi() {

@@ -6,8 +6,10 @@
 package views.ThuChiFrame;
 
 import Bean.HoKhauBean;
+import controllers.ThuChiManagerController.CacHoNoPhiManagerController;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.sql.SQLException;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -15,27 +17,25 @@ import javax.swing.JOptionPane;
  *
  * @author Admin
  */
-public class CacHoNoPhiVSJFrame extends javax.swing.JFrame {
+public class CacHoNoPhiJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form CacHoNoPhiVSFrame
      */
-    public CacHoNoPhiVSJFrame() {
+    
+    private JFrame parentFrame;
+    public CacHoNoPhiJFrame() {
         initComponents();
     }
 
-    private JFrame parentFrame;
-    private HoKhauBean hoKhauBean;
-    
-    public CacHoNoPhiVSJFrame(JFrame parentFrame) {
+    public CacHoNoPhiJFrame(JFrame parentFrame,int maThuChi) throws SQLException {
         initComponents();
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.parentFrame = parentFrame;
-//        this.hoKhauBean = hoKhauBean;
         this.setTitle("Các hộ nợ phí vệ sinh");
-        parentFrame.setEnabled(false);
-        //this.controller = new 
-       
+
+        CacHoNoPhiManagerController cacHoNoPhiManagerController = new CacHoNoPhiManagerController(this.jPanel, maThuChi);
+        cacHoNoPhiManagerController.setDataTable();
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -43,14 +43,12 @@ public class CacHoNoPhiVSJFrame extends javax.swing.JFrame {
             }
         });
     }
-    
+
     public void close() {
         this.parentFrame.setEnabled(true);
         dispose();
     }
 
-
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -60,17 +58,36 @@ public class CacHoNoPhiVSJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
+        jPanel.setLayout(jPanelLayout);
+        jPanelLayout.setHorizontalGroup(
+            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 747, Short.MAX_VALUE)
+        );
+        jPanelLayout.setVerticalGroup(
+            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 387, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 324, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -93,24 +110,26 @@ public class CacHoNoPhiVSJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CacHoNoPhiVSJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CacHoNoPhiJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CacHoNoPhiVSJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CacHoNoPhiJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CacHoNoPhiVSJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CacHoNoPhiJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CacHoNoPhiVSJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CacHoNoPhiJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CacHoNoPhiVSJFrame().setVisible(true);
+                new CacHoNoPhiJFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPanel;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import javax.swing.JFrame;
-import views.ThuChiFrame.CacHoNoPhiVSJFrame;
+import views.ThuChiFrame.CacHoNoPhiJFrame;
 import views.ThuChiFrame.CacKhoanDongGopJFrame;
 import views.ThuChiFrame.NopTienJFrame;
 import views.ThuChiFrame.ThemKhoanDongGopJFrame;
@@ -40,7 +40,7 @@ public class ThuChiPanel extends javax.swing.JPanel {
     public ThuChiPanel(JFrame parentFrame) throws SQLException {
         this.parentJFrame = parentFrame;
         initComponents();
-        this.thuChiController = new ThuChiController(this.jScrollPane1);
+        this.thuChiController = new ThuChiController(this.parentJFrame,this.jScrollPane1);
         this.thuChiController.setData();
     }
     

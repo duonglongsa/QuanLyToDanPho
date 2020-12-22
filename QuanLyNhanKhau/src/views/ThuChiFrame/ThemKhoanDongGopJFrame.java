@@ -14,7 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import models.ThuChi;
+import models.ThuChiModel;
 import services.ThuChiService;
 
 /**
@@ -25,7 +25,7 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
 
     private JFrame parentFrame;
     private ThuChiController parentController;
-    private ThuChi thuChi;
+    private ThuChiModel thuChi;
     private ThuChiService thuChiService;
 
     /**
@@ -39,7 +39,7 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
         initComponents();
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.parentFrame = parentFrame;
-        this.thuChi = new ThuChi();
+        this.thuChi = new ThuChiModel();
         
         this.parentController = parentController;
         

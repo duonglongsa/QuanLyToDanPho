@@ -1,6 +1,6 @@
 package models;
 
-public class KhoanThu {
+public class KhoanThuModel {
 	private int maThu;
 	private int maPhi;
 	private int idHoKhau;
@@ -8,7 +8,7 @@ public class KhoanThu {
 	private String ngayThu;
 	
 	
-	public KhoanThu(int idHoKhau, int maThu, int maPhi, int tienDaThu, String ngayThu) {
+	public KhoanThuModel(int idHoKhau, int maThu, int maPhi, int tienDaThu, String ngayThu) {
 		this.idHoKhau = idHoKhau;
 		this.maThu = maThu;
 		this.maPhi = maPhi;

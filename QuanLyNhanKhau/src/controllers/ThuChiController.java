@@ -5,6 +5,7 @@
  */
 package controllers;
 
+import controllers.ThuChiManagerController.CacHoNoPhiManagerController;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -14,12 +15,14 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import models.ThuChi;
+import models.ThuChiModel;
 import services.ThuChiService;
+import views.ThuChiFrame.CacHoNoPhiJFrame;
 
 /**
  *
@@ -30,18 +33,20 @@ public class ThuChiController {
     private JScrollPane scroll;
     private ThuChiService thuChiService;
     private JPanel panel;
-
-    public ThuChiController(JScrollPane scroll) {
+    
+    private JFrame parentJFrame;
+    public ThuChiController(JFrame parentJFrame,JScrollPane scroll) {
         this.scroll = scroll;
-
+        
+        this.parentJFrame = parentJFrame;
         this.thuChiService = new ThuChiService();
     }
 
     public void setData() throws SQLException {
-        List<ThuChi> thuChiList = this.thuChiService.tatCaLoaiPhi();
+        List<ThuChiModel> thuChiList = this.thuChiService.tatCaLoaiPhi();
 
         this.panel = new JPanel(new GridLayout(20, 1, 15, 15));
-        for (ThuChi item : thuChiList) {
+        for (ThuChiModel item : thuChiList) {
             JPanel suKienPanel = new JPanel(new BorderLayout());
 
             if (item.isBatBuoc()) {
@@ -61,6 +66,20 @@ public class ThuChiController {
 
             // button
             JButton chiTietButton = new JButton("Chi Tiết");
+            // action chiTiet
+            
+            chiTietButton.addActionListener(e -> {
+                try {
+                    CacHoNoPhiJFrame cacHoNoPhiJFrame = new CacHoNoPhiJFrame(this.parentJFrame,item.getMaThuChi());
+                    cacHoNoPhiJFrame.setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ThuChiController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+               
+            });
+            
+            
+            
             JButton xoaButton = new JButton("Xóa");
 
             //action Xóa

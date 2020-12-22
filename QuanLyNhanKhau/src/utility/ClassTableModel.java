@@ -3,7 +3,9 @@ package utility;
 import Bean.HoKhauBean;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
+import models.DuNoVaHoKhauModel;
 import models.GiaDinhModel;
+import models.HoKhauModel;
 import models.NhanKhauModel;
 import models.TieuSuModel;
 
@@ -81,7 +83,8 @@ public class ClassTableModel {
 //        });
         return dtm;
     }
-    public DefaultTableModel setTableGiaDinh(List<GiaDinhModel> giaDinh, String[] listColumn) {
+    
+    public DefaultTableModel setTableDuNo(List<DuNoVaHoKhauModel> duNo, String[] listColumn) {
         final int column = listColumn.length;
         
         DefaultTableModel dtm = new DefaultTableModel()  {
@@ -99,13 +102,13 @@ public class ClassTableModel {
         Object[] obj;
         obj = new Object[column];
         
-        giaDinh.forEach((GiaDinhModel item) -> {
-            obj[0] = item.getHoTen();
-            obj[1] = item.getNamSinh().toString();
-            obj[2] = item.getGioiTinh();
-            obj[3] = item.getQuanHeVoiNhanKhau();
-            obj[4] = item.getNgheNghiep();
-            obj[5] = item.getDiaChiHienTai();
+        duNo.forEach((DuNoVaHoKhauModel item) -> {
+            obj[0] = item.getHokhau().getNguoiThucHien();
+            obj[1] = item.getHokhau().getDiaChi();
+            obj[2] = item.getDuNo().getTienNo();
+            obj[3] = item.getDuNo().getTienDu();
+            obj[4] = item.getDuNo().getTuNgay();
+            obj[5] = item.getDuNo().getDenNgay();
             dtm.addRow(obj);
         });
         

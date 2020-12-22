@@ -9,11 +9,11 @@ package models;
  *
  * @author Zbook 15 G3
  */
-public class DuNoVaHoKhau {
+public class DuNoVaHoKhauModel {
     private HoKhauModel hokhau;
-    private DuNo duNo;
+    private DuNoModel duNo;
 
-    public DuNoVaHoKhau(HoKhauModel hokhau, DuNo duNo) {
+    public DuNoVaHoKhauModel(HoKhauModel hokhau, DuNoModel duNo) {
         this.hokhau = hokhau;
         this.duNo = duNo;
     }
@@ -26,11 +26,11 @@ public class DuNoVaHoKhau {
         this.hokhau = hokhau;
     }
 
-    public DuNo getDuNo() {
+    public DuNoModel getDuNo() {
         return duNo;
     }
 
-    public void setDuNo(DuNo duNo) {
+    public void setDuNo(DuNoModel duNo) {
         this.duNo = duNo;
     }
 }

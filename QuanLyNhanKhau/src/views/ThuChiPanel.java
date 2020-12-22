@@ -327,6 +327,17 @@ public class ThuChiPanel extends javax.swing.JPanel {
         );
 
         addBtn.setBackground(new java.awt.Color(102, 153, 255));
+        addBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addBtnMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addBtnMouseExited(evt);
+            }
+        });
 
         jLabel19.setBackground(new java.awt.Color(255, 255, 255));
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -367,7 +378,7 @@ public class ThuChiPanel extends javax.swing.JPanel {
                     .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE))
+                .addComponent(scrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -381,21 +392,46 @@ public class ThuChiPanel extends javax.swing.JPanel {
 
     private void tienVSDetailMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tienVSDetailMouseEntered
         // TODO add your handling code here:
-        this.tienVSDetail.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        Font font = this.tienVSDetail.getFont();
-        Map attributes = font.getAttributes();
-        attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
-        this.tienVSDetail.setFont(font.deriveFont(attributes));
+        jLabelMouseEntered(this.tienVSDetail);
     }//GEN-LAST:event_tienVSDetailMouseEntered
 
     private void tienVSDetailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tienVSDetailMouseExited
         // TODO add your handling code here:
-        Font font = this.tienVSDetail.getFont();
-        Map attributes = font.getAttributes();
-        attributes.put(TextAttribute.UNDERLINE, -1);
-        this.tienVSDetail.setFont(font.deriveFont(attributes));
+        jLabelMouseExited(this.tienVSDetail);
     }//GEN-LAST:event_tienVSDetailMouseExited
 
+    private void addBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBtnMouseClicked
+        // TODO add your handling code here:
+        ThemKhoanDongGopJFrame themKhoanDongGop = new ThemKhoanDongGopJFrame(this.parentJFrame);
+        themKhoanDongGop.setLocationRelativeTo(null);
+        themKhoanDongGop.setResizable(false);
+        themKhoanDongGop.setVisible(true);
+    }//GEN-LAST:event_addBtnMouseClicked
+
+    private void addBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBtnMouseEntered
+        this.addBtn.setBackground(new Color(0,51,153));
+    }//GEN-LAST:event_addBtnMouseEntered
+
+    private void addBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBtnMouseExited
+        // TODO add your handling code here:
+        this.addBtn.setBackground(new Color(102,153,255));
+    }//GEN-LAST:event_addBtnMouseExited
+
+    //xu ly su kien chuot di vao jLabel
+    private void jLabelMouseEntered(javax.swing.JLabel jLabel){
+        jLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        Font font = jLabel.getFont();
+        Map attributes = font.getAttributes();
+        attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
+        jLabel.setFont(font.deriveFont(attributes));
+    }
+    //xu ly su kien chuot di khoi jLabel
+    private void jLabelMouseExited(javax.swing.JLabel jLabel){
+        Font font = jLabel.getFont();
+        Map attributes = font.getAttributes();
+        attributes.put(TextAttribute.UNDERLINE, -1);
+        jLabel.setFont(font.deriveFont(attributes));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addBtn;

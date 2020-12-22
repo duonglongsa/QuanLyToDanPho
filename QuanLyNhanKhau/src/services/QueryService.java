@@ -92,7 +92,7 @@ public class QueryService {
     public void queryNoResult(String sql) throws SQLException{
         Connection temporaryConnection = getConnection();
         PreparedStatement statement = temporaryConnection.prepareStatement(sql);
-        statement.executeQuery();
+        statement.execute();
         temporaryConnection.close();
     }
 }

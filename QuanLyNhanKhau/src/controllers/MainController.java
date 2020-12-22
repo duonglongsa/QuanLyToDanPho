@@ -9,7 +9,10 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -132,8 +135,15 @@ public class MainController {
                     view = new ThongKePanel(this.jfrMain);
                     break;
                 case "ThuChi":
-                    view = new ThuChiPanel(this.jfrMain);
+                {
+                    try {
+                        view = new ThuChiPanel(this.jfrMain);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
                     break;
+
                 default:
                     break;
             }

@@ -66,6 +66,10 @@ public class ThuChiService {
         qs.queryNoResult("DELETE FROM `du_no` WHERE `idHoKhau` = " + Integer.toString(noId));
     }
     
+    public void xoaPhi(int phiId) throws SQLException {
+        qs.queryNoResult("DELETE FROM `thu_chi` WHERE `maThuChi` = " + Integer.toString(phiId));
+    }
+    
     public void dongPhi(int maPhi,int idHoKhau, int tienDaThu,String ngayThu) throws SQLException{
         String sql = String.format("INSERT INTO `khoan_thu`(`maPhi`, `idHoKhau`, `tienDaThu`, `ngayThu`) VALUES (%d,%d,%d,%s)", maPhi,idHoKhau,tienDaThu,ngayThu);
         qs.queryNoResult(sql);

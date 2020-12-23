@@ -17,6 +17,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import views.ThuChiFrame.CacHoNoPhiJFrame;
 import views.ThuChiFrame.NopTienJFrame;
@@ -28,8 +30,10 @@ import views.ThuChiFrame.XemDuNoJFrame;
  * @author Admin
  */
 public class ThuChiPanel extends javax.swing.JPanel {
+
     private JFrame parentJFrame;
     private ThuChiController thuChiController;
+
     /**
      * Creates new form ThuChiPanel
      */
@@ -40,11 +44,10 @@ public class ThuChiPanel extends javax.swing.JPanel {
     public ThuChiPanel(JFrame parentFrame) throws SQLException {
         this.parentJFrame = parentFrame;
         initComponents();
-        this.thuChiController = new ThuChiController(this.parentJFrame,this.jScrollPane1);
+        this.thuChiController = new ThuChiController(this.parentJFrame, this.jScrollPane1);
         this.thuChiController.setData();
     }
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -210,12 +213,12 @@ public class ThuChiPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_addBtnMouseClicked
 
     private void addBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBtnMouseEntered
-        this.addBtn.setBackground(new Color(0,51,153));
+        this.addBtn.setBackground(new Color(0, 51, 153));
     }//GEN-LAST:event_addBtnMouseEntered
 
     private void addBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBtnMouseExited
         // TODO add your handling code here:
-        this.addBtn.setBackground(new Color(102,153,255));
+        this.addBtn.setBackground(new Color(102, 153, 255));
     }//GEN-LAST:event_addBtnMouseExited
 
     private void nhapTienDaThuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nhapTienDaThuMouseClicked
@@ -228,30 +231,36 @@ public class ThuChiPanel extends javax.swing.JPanel {
 
     private void nhapTienDaThuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nhapTienDaThuMouseEntered
         // TODO add your handling code here:
-        this.nhapTienDaThu.setBackground(new Color(0,51,153));
+        this.nhapTienDaThu.setBackground(new Color(0, 51, 153));
     }//GEN-LAST:event_nhapTienDaThuMouseEntered
 
     private void nhapTienDaThuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nhapTienDaThuMouseExited
         // TODO add your handling code here:
-          this.nhapTienDaThu.setBackground(new Color(102,153,255));
+        this.nhapTienDaThu.setBackground(new Color(102, 153, 255));
     }//GEN-LAST:event_nhapTienDaThuMouseExited
 
     private void xemDuNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseClicked
         // TODO add your handling code here:
-        XemDuNoJFrame xemDuNo = new XemDuNoJFrame(this.parentJFrame, this.thuChiController);
-        xemDuNo.setLocationRelativeTo(null);
-        xemDuNo.setResizable(false);
-        xemDuNo.setVisible(true);
+        XemDuNoJFrame xemDuNo;
+        try {
+            xemDuNo = new XemDuNoJFrame(this.parentJFrame, this.thuChiController);
+            xemDuNo.setLocationRelativeTo(null);
+            xemDuNo.setResizable(false);
+            xemDuNo.setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(ThuChiPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_xemDuNoMouseClicked
 
     private void xemDuNoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseEntered
         // TODO add your handling code here:
-        this.xemDuNo.setBackground(new Color(0,51,153));
+        this.xemDuNo.setBackground(new Color(0, 51, 153));
     }//GEN-LAST:event_xemDuNoMouseEntered
 
     private void xemDuNoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseExited
         // TODO add your handling code here:
-        this.xemDuNo.setBackground(new Color(102,153,255));
+        this.xemDuNo.setBackground(new Color(102, 153, 255));
     }//GEN-LAST:event_xemDuNoMouseExited
 
 

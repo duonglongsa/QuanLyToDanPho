@@ -87,6 +87,38 @@ public class ClassTableModel {
 //        });
         return dtm;
     }
+    
+     public DefaultTableModel setTableGiaDinh(List<GiaDinhModel> giaDinh, String[] listColumn) {
+        final int column = listColumn.length;
+        
+        DefaultTableModel dtm = new DefaultTableModel()  {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return super.isCellEditable(row, column); //To change body of generated methods, choose Tools | Templates.
+            }
+            @Override
+            public Class<?> getColumnClass(int columnIndex) {
+                 return columnIndex == 6 ? Boolean.class : String.class;
+            }
+        };
+        
+        dtm.setColumnIdentifiers(listColumn);
+        Object[] obj;
+        obj = new Object[column];
+        
+        giaDinh.forEach((GiaDinhModel item) -> {
+            obj[0] = item.getHoTen();
+            obj[1] = item.getNamSinh().toString();
+            obj[2] = item.getGioiTinh();
+            obj[3] = item.getQuanHeVoiNhanKhau();
+            obj[4] = item.getNgheNghiep();
+            obj[5] = item.getDiaChiHienTai();
+            dtm.addRow(obj);
+        });
+        
+        dtm.addRow(new Object[] {"", "", "", "", "", ""});
+        return dtm;
+    }
 
     public DefaultTableModel setTableKhoanThu(List<KhoanThuVaHoKhauModel> duNo, String[] listColumn) {
         final int column = listColumn.length;

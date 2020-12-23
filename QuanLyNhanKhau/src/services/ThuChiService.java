@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import models.ThuChiModel;
 import models.KhoanThuModel;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import models.DuNoModel;
@@ -23,8 +24,8 @@ public class ThuChiService {
 
     private final QueryService qs = new QueryService();
 
-    public void themLoaiPhi(int maThu, String tenPhi, boolean batBuoc) throws SQLException {
-        String sql = String.format("INSERT INTO `thu_chi`(`maThuChi`, `tenLoaiPhi`, `batBuoc`) VALUES (%d,%s,%s)", maThu, tenPhi, batBuoc);
+    public void themLoaiPhi(int maThu, String tenPhi, int batBuoc) throws SQLException {
+        String sql = String.format("INSERT INTO thu_chi(maThuChi, tenLoaiPhi, batBuoc) VALUES ('" + maThu + "', '" + tenPhi + "', '" + batBuoc + "')");
         qs.queryNoResult(sql);
     }
 
@@ -43,16 +44,14 @@ public class ThuChiService {
      * @throws SQLException
      * @author hehe
      */
-    public long tongPhiVeSinh() throws SQLException {
-        return qs.querySingle("SELECT SUM(tienDaThu) FROM `khoan_thu` WHERE maPhi=1", (rs) -> rs.getLong(1));
-    }
-
     public List<DuNoVaHoKhauModel> timHoKhauDangNo() throws SQLException {
-        return qs.queryMultiple("SELECT * FROM `du_no` JOIN `ho_khau` ON `du_no`.`idHoKhau`=`ho_khau`.`ID`", (rs) -> {
-            DuNoModel no = new DuNoModel(rs.getInt(3), rs.getInt(1), rs.getInt(2), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7));
-            HoKhauModel hoKhau = new HoKhauModel(rs.getInt(3), rs.getString(9), rs.getInt(10), rs.getString(12));
-            return new DuNoVaHoKhauModel(hoKhau, no);
-        });
+        return qs.queryMultiple("SELECT * FROM `du_no`\n"
+                + "JOIN `ho_khau` ON `du_no`.`idHoKhau`=`ho_khau`.`ID`\n"
+                + "JOIN `nhan_khau` ON `nhan_khau`.`ID`=`ho_khau`.`idChuHo`", (rs) -> {
+                    DuNoModel no = new DuNoModel(rs.getInt(3), rs.getInt(1), rs.getInt(2), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7));
+                    HoKhauModel hoKhau = new HoKhauModel(rs.getInt(3), rs.getString(9), rs.getInt(10), rs.getString(12));
+                    return new DuNoVaHoKhauModel(hoKhau, no, rs.getString(19));
+                });
     }
 
     public List<KhoanThuVaHoKhauModel> timKhoanThuTheoHoKhau(int loaiPhiId) throws SQLException {
@@ -75,8 +74,8 @@ public class ThuChiService {
         qs.queryNoResult("DELETE FROM `thu_chi` WHERE `maThuChi` = " + Integer.toString(phiId));
     }
 
-    public void dongPhi(int maPhi, int idHoKhau, int tienDaThu, String ngayThu) throws SQLException {
-        String sql = String.format("INSERT INTO `khoan_thu`(`maPhi`, `idHoKhau`, `tienDaThu`, `ngayThu`) VALUES (%d,%d,%d,%s)", maPhi, idHoKhau, tienDaThu, ngayThu);
+    public void dongPhi(int maPhi, int idHoKhau, int tienDaThu, LocalDate ngayThu) throws SQLException {
+        String sql = String.format("INSERT INTO `khoan_thu`(`maPhi`, `idHoKhau`, `tienDaThu`, `ngayThu`) VALUES ('" + maPhi + "', '" + idHoKhau + "', '" + tienDaThu + "', '" + ngayThu.toString() + "')");
         qs.queryNoResult(sql);
     }
 }

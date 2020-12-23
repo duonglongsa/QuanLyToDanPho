@@ -50,9 +50,9 @@ public class ThuChiController {
             JPanel suKienPanel = new JPanel(new BorderLayout());
 
             if (item.isBatBuoc()) {
-                suKienPanel.setBackground(new java.awt.Color(255, 204, 0));
+                suKienPanel.setBackground(new java.awt.Color(255, 80, 80));
             } else {
-                suKienPanel.setBackground(new java.awt.Color(255, 10, 0));
+                suKienPanel.setBackground(new java.awt.Color(153, 204, 255));
             }
 
             suKienPanel.setPreferredSize(new Dimension(50, 100));

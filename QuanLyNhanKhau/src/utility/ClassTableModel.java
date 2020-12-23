@@ -12,18 +12,19 @@ import models.TieuSuModel;
 
 /**
  *
- * @author Hai
- * class dinh nghia cac dang table co trong phan mem
+ * @author Hai class dinh nghia cac dang table co trong phan mem
  */
 public class ClassTableModel {
+
     // bang cho main frame
     public DefaultTableModel setTableNhanKhau(List<NhanKhauModel> listItem, String[] listColumn) {
         final int columns = listColumn.length;
-        DefaultTableModel dtm = new DefaultTableModel()  {
+        DefaultTableModel dtm = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return super.isCellEditable(row, column); //To change body of generated methods, choose Tools | Templates.
             }
+
             @Override
             public Class<?> getColumnClass(int columnIndex) {
                 return columnIndex == 5 ? Boolean.class : String.class;
@@ -42,25 +43,27 @@ public class ClassTableModel {
         });
         return dtm;
     }
+
     // table cho tieusu
     public DefaultTableModel setTableTieuSu(List<TieuSuModel> tieuSu, String[] listColumn) {
         final int column = listColumn.length;
-        
-        DefaultTableModel dtm = new DefaultTableModel()  {
+
+        DefaultTableModel dtm = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return super.isCellEditable(row, column); //To change body of generated methods, choose Tools | Templates.
             }
+
             @Override
             public Class<?> getColumnClass(int columnIndex) {
-                 return columnIndex == 5 ? Boolean.class : String.class;
+                return columnIndex == 5 ? Boolean.class : String.class;
             }
         };
-        
+
         dtm.setColumnIdentifiers(listColumn);
         Object[] obj;
         obj = new Object[column];
-        
+
         tieuSu.forEach((TieuSuModel item) -> {
             obj[0] = item.getTuNgay().toString();
             obj[1] = item.getDenNgay().toString();
@@ -69,9 +72,9 @@ public class ClassTableModel {
             obj[4] = item.getNoiLamViec();
             dtm.addRow(obj);
         });
-        
-        dtm.addRow(new Object[] {"", "", "", "", ""});
-        
+
+        dtm.addRow(new Object[]{"", "", "", "", ""});
+
 //        dtm.addTableModelListener(new TableModelListener() {
 //            @Override
 //            public void tableChanged(TableModelEvent e) {
@@ -84,25 +87,26 @@ public class ClassTableModel {
 //        });
         return dtm;
     }
-    
+
     public DefaultTableModel setTableKhoanThu(List<KhoanThuVaHoKhauModel> duNo, String[] listColumn) {
         final int column = listColumn.length;
-        
-        DefaultTableModel dtm = new DefaultTableModel()  {
+
+        DefaultTableModel dtm = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return super.isCellEditable(row, column); //To change body of generated methods, choose Tools | Templates.
             }
+
             @Override
             public Class<?> getColumnClass(int columnIndex) {
-                 return columnIndex == 6 ? Boolean.class : String.class;
+                return columnIndex == 6 ? Boolean.class : String.class;
             }
         };
-        
+
         dtm.setColumnIdentifiers(listColumn);
         Object[] obj;
         obj = new Object[column];
-        
+
         duNo.forEach((KhoanThuVaHoKhauModel item) -> {
             obj[0] = item.getHoKhau().getMaHoKhau();
             obj[1] = item.getTenChuHo();
@@ -110,18 +114,44 @@ public class ClassTableModel {
             obj[3] = item.getKhoanThu().getNgayThu();
             dtm.addRow(obj);
         });
-        
-        dtm.addRow(new Object[] {"", "", "", ""});
+
+        dtm.addRow(new Object[]{"", "", "", ""});
         return dtm;
     }
-    
+
+    public DefaultTableModel setTableDuNo(List<DuNoVaHoKhauModel> duNo, String[] listColumn) {
+        final int column = listColumn.length;
+
+        DefaultTableModel dtm = new DefaultTableModel();
+        dtm.setColumnIdentifiers(listColumn);
+        Object[] obj;
+        obj = new Object[column];
+
+        duNo.forEach((DuNoVaHoKhauModel item) -> {
+            obj[0] = item.getHokhau().getMaHoKhau();
+            obj[1] = item.getTenChuHo();
+            obj[2] = item.getDuNo().getMaPhi();
+            obj[3] = item.getDuNo().getTienNo();
+            obj[4] = item.getDuNo().getTienDu();
+            obj[5] = item.getDuNo().getTuNgay();
+
+            obj[6] = item.getDuNo().getDenNgay();
+
+            dtm.addRow(obj);
+        });
+
+        dtm.addRow(new Object[]{"", "", "", "", "", "", ""});
+        return dtm;
+    }
+
     public DefaultTableModel setTableHoKhau(List<HoKhauBean> listItem, String[] listColumn) {
         final int columns = listColumn.length;
-        DefaultTableModel dtm = new DefaultTableModel()  {
+        DefaultTableModel dtm = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return super.isCellEditable(row, column); //To change body of generated methods, choose Tools | Templates.
             }
+
             @Override
             public Class<?> getColumnClass(int columnIndex) {
                 return columnIndex == 5 ? Boolean.class : String.class;

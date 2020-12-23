@@ -12,10 +12,12 @@ package models;
 public class DuNoVaHoKhauModel {
     private HoKhauModel hokhau;
     private DuNoModel duNo;
+    private String tenChuHo;
 
-    public DuNoVaHoKhauModel(HoKhauModel hokhau, DuNoModel duNo) {
+    public DuNoVaHoKhauModel(HoKhauModel hokhau, DuNoModel duNo, String tenChuHo) {
         this.hokhau = hokhau;
         this.duNo = duNo;
+        this.tenChuHo = tenChuHo;
     }
 
     public HoKhauModel getHokhau() {
@@ -32,5 +34,9 @@ public class DuNoVaHoKhauModel {
 
     public void setDuNo(DuNoModel duNo) {
         this.duNo = duNo;
+    }
+    
+    public String getTenChuHo() {
+        return this.tenChuHo;
     }
 }

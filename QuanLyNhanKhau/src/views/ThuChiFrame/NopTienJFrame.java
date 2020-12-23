@@ -185,8 +185,8 @@ public class NopTienJFrame extends javax.swing.JFrame {
         
          try {
              this.thuChiService.dongPhi(Integer.parseInt(maPhi), Integer.parseInt(soHoKhau), Integer.parseInt(soTien), LocalDate.now());
-             
              JOptionPane.showMessageDialog(null, "Thu phí thành công!!");
+             close();
          } catch (SQLException ex) {
              Logger.getLogger(NopTienJFrame.class.getName()).log(Level.SEVERE, null, ex);
              JOptionPane.showMessageDialog(null, "Something was wrong!!");

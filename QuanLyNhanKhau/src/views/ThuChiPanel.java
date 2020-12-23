@@ -66,8 +66,6 @@ public class ThuChiPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         nhapTienDaThu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        xemDuNo = new javax.swing.JPanel();
-        xemDuNolabel = new javax.swing.JLabel();
 
         setOpaque(false);
 
@@ -142,45 +140,12 @@ public class ThuChiPanel extends javax.swing.JPanel {
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        xemDuNo.setBackground(new java.awt.Color(102, 153, 255));
-        xemDuNo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                xemDuNoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                xemDuNoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                xemDuNoMouseExited(evt);
-            }
-        });
-
-        xemDuNolabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        xemDuNolabel.setForeground(new java.awt.Color(255, 255, 255));
-        xemDuNolabel.setText("Xem danh sách dư nợ theo hộ khẩu");
-
-        javax.swing.GroupLayout xemDuNoLayout = new javax.swing.GroupLayout(xemDuNo);
-        xemDuNo.setLayout(xemDuNoLayout);
-        xemDuNoLayout.setHorizontalGroup(
-            xemDuNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(xemDuNoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(xemDuNolabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        xemDuNoLayout.setVerticalGroup(
-            xemDuNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(xemDuNolabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(xemDuNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(nhapTienDaThu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -196,8 +161,7 @@ public class ThuChiPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(addBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(nhapTienDaThu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(xemDuNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(nhapTienDaThu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(9, 9, 9)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -239,30 +203,6 @@ public class ThuChiPanel extends javax.swing.JPanel {
         this.nhapTienDaThu.setBackground(new Color(102, 153, 255));
     }//GEN-LAST:event_nhapTienDaThuMouseExited
 
-    private void xemDuNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseClicked
-        // TODO add your handling code here:
-        XemDuNoJFrame xemDuNo;
-        try {
-            xemDuNo = new XemDuNoJFrame(this.parentJFrame, this.thuChiController);
-            xemDuNo.setLocationRelativeTo(null);
-            xemDuNo.setResizable(false);
-            xemDuNo.setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(ThuChiPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }//GEN-LAST:event_xemDuNoMouseClicked
-
-    private void xemDuNoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseEntered
-        // TODO add your handling code here:
-        this.xemDuNo.setBackground(new Color(0, 51, 153));
-    }//GEN-LAST:event_xemDuNoMouseEntered
-
-    private void xemDuNoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseExited
-        // TODO add your handling code here:
-        this.xemDuNo.setBackground(new Color(102, 153, 255));
-    }//GEN-LAST:event_xemDuNoMouseExited
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addBtn;
@@ -274,7 +214,5 @@ public class ThuChiPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel nhapTienDaThu;
-    private javax.swing.JPanel xemDuNo;
-    private javax.swing.JLabel xemDuNolabel;
     // End of variables declaration//GEN-END:variables
 }

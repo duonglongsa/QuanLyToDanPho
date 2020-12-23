@@ -282,7 +282,7 @@ public class HomePagePanel extends javax.swing.JPanel {
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Thu Chi:");
+        jLabel12.setText("Số khoản thu chi:");
 
         thuChiLabel.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
         thuChiLabel.setForeground(new java.awt.Color(255, 255, 255));

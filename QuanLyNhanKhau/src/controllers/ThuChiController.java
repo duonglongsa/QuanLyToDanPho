@@ -60,7 +60,7 @@ public class ThuChiController {
             JLabel tenSuKien = new JLabel();
             tenSuKien.setFont(new java.awt.Font("Arial", 1, 20));
 
-            String rangBuoc = item.isBatBuoc() ? "Bắt buộc" : "Tự nguyên";
+            String rangBuoc = item.isBatBuoc() ? "Bắt buộc" : "Tự nguyện";
             String ten = item.getTenLoaiPhi() + " (" + rangBuoc + ")";
             tenSuKien.setText(ten);
 

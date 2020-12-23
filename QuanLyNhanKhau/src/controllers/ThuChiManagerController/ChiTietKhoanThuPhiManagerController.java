@@ -21,6 +21,7 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import models.DuNoVaHoKhauModel;
 import models.HoKhauModel;
+import models.KhoanThuVaHoKhauModel;
 import models.NhanKhauModel;
 import models.ThuChiModel;
 import services.NhanKhauService;
@@ -32,33 +33,33 @@ import views.infoViews.InfoJframe;
  *
  * @author Hai
  */
-public class CacHoNoPhiManagerController {
+public class ChiTietKhoanThuPhiManagerController {
     
     private JPanel jpnView;
     private ThuChiService thuChiService;
-    private List<DuNoVaHoKhauModel> listDuNo;
+    private List<KhoanThuVaHoKhauModel> listKhoanThu;
     private ClassTableModel classTableModel = null;
-    private final String[] COLUMNS = {"Họ tên", "Địa chỉ hiện nay", "Tiền nợ", "Tiền dư", "Từ ngày", "Đến ngày"};
+    private final String[] COLUMNS = {"Mã hộ khẩu","Họ tên chủ hộ", "Tiền đã thu", "Ngày thu"};
     private JFrame parentJFrame;
 
-    public CacHoNoPhiManagerController(JPanel jpnView, int maThuChi) throws SQLException {
+    public ChiTietKhoanThuPhiManagerController(JPanel jpnView, int maThuChi) throws SQLException {
         this.jpnView = jpnView;
         classTableModel = new ClassTableModel();
         this.thuChiService = new ThuChiService();
-        this.listDuNo = this.thuChiService.timHoKhauDangNo(maThuChi);
+        this.listKhoanThu = this.thuChiService.timKhoanThuTheoHoKhau(maThuChi);
     }
 
-    public CacHoNoPhiManagerController() {
+    public ChiTietKhoanThuPhiManagerController() {
     }
     
     
    
     public void setDataTable() {
-        List<DuNoVaHoKhauModel> listItem = new ArrayList<>();
-        this.listDuNo.forEach(duNo -> {
+        List<KhoanThuVaHoKhauModel> listItem = new ArrayList<>();
+        this.listKhoanThu.forEach(duNo -> {
             listItem.add(duNo);
         });
-        DefaultTableModel model = classTableModel.setTableDuNo(listItem, COLUMNS);
+        DefaultTableModel model = classTableModel.setTableKhoanThu(listItem, COLUMNS);
         JTable table = new JTable(model) {
             @Override
             public boolean editCellAt(int row, int column, EventObject e) {

@@ -6,6 +6,7 @@ import javax.swing.table.DefaultTableModel;
 import models.DuNoVaHoKhauModel;
 import models.GiaDinhModel;
 import models.HoKhauModel;
+import models.KhoanThuVaHoKhauModel;
 import models.NhanKhauModel;
 import models.TieuSuModel;
 
@@ -84,7 +85,7 @@ public class ClassTableModel {
         return dtm;
     }
     
-    public DefaultTableModel setTableDuNo(List<DuNoVaHoKhauModel> duNo, String[] listColumn) {
+    public DefaultTableModel setTableKhoanThu(List<KhoanThuVaHoKhauModel> duNo, String[] listColumn) {
         final int column = listColumn.length;
         
         DefaultTableModel dtm = new DefaultTableModel()  {
@@ -102,17 +103,15 @@ public class ClassTableModel {
         Object[] obj;
         obj = new Object[column];
         
-        duNo.forEach((DuNoVaHoKhauModel item) -> {
-            obj[0] = item.getHokhau().getNguoiThucHien();
-            obj[1] = item.getHokhau().getDiaChi();
-            obj[2] = item.getDuNo().getTienNo();
-            obj[3] = item.getDuNo().getTienDu();
-            obj[4] = item.getDuNo().getTuNgay();
-            obj[5] = item.getDuNo().getDenNgay();
+        duNo.forEach((KhoanThuVaHoKhauModel item) -> {
+            obj[0] = item.getHoKhau().getMaHoKhau();
+            obj[1] = item.getTenChuHo();
+            obj[2] = item.getKhoanThu().getTienDaThu();
+            obj[3] = item.getKhoanThu().getNgayThu();
             dtm.addRow(obj);
         });
         
-        dtm.addRow(new Object[] {"", "", "", "", "", ""});
+        dtm.addRow(new Object[] {"", "", "", ""});
         return dtm;
     }
     

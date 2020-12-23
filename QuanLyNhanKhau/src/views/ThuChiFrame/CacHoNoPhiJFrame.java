@@ -6,7 +6,7 @@
 package views.ThuChiFrame;
 
 import Bean.HoKhauBean;
-import controllers.ThuChiManagerController.CacHoNoPhiManagerController;
+import controllers.ThuChiManagerController.ChiTietKhoanThuPhiManagerController;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.sql.SQLException;
@@ -32,9 +32,9 @@ public class CacHoNoPhiJFrame extends javax.swing.JFrame {
         initComponents();
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.parentFrame = parentFrame;
-        this.setTitle("Các hộ nợ phí vệ sinh");
+        this.setTitle("Chi tiết khoản thu");
 
-        CacHoNoPhiManagerController cacHoNoPhiManagerController = new CacHoNoPhiManagerController(this.jPanel, maThuChi);
+        ChiTietKhoanThuPhiManagerController cacHoNoPhiManagerController = new ChiTietKhoanThuPhiManagerController(this.jPanel, maThuChi);
         cacHoNoPhiManagerController.setDataTable();
         this.addWindowListener(new WindowAdapter() {
             @Override

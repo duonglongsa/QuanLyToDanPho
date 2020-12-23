@@ -5,7 +5,7 @@
  */
 package controllers;
 
-import controllers.ThuChiManagerController.CacHoNoPhiManagerController;
+import controllers.ThuChiManagerController.ChiTietKhoanThuPhiManagerController;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -72,6 +72,7 @@ public class ThuChiController {
                 try {
                     CacHoNoPhiJFrame cacHoNoPhiJFrame = new CacHoNoPhiJFrame(this.parentJFrame,item.getMaThuChi());
                     cacHoNoPhiJFrame.setVisible(true);
+                    cacHoNoPhiJFrame.setLocationRelativeTo(null);
                 } catch (SQLException ex) {
                     Logger.getLogger(ThuChiController.class.getName()).log(Level.SEVERE, null, ex);
                 }

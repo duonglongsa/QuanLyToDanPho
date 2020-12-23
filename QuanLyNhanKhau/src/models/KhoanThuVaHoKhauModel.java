@@ -12,10 +12,12 @@ package models;
 public class KhoanThuVaHoKhauModel {
     private KhoanThuModel khoanThu;
     private HoKhauModel hoKhau;
+    private String tenChuHo;
 
-    public KhoanThuVaHoKhauModel(KhoanThuModel khoanThu, HoKhauModel hoKhau) {
+    public KhoanThuVaHoKhauModel(KhoanThuModel khoanThu, HoKhauModel hoKhau, String tenChuHo) {
         this.khoanThu = khoanThu;
         this.hoKhau = hoKhau;
+        this.tenChuHo = tenChuHo;
     }
 
     public KhoanThuModel getKhoanThu() {
@@ -32,6 +34,10 @@ public class KhoanThuVaHoKhauModel {
 
     public void setHoKhau(HoKhauModel hoKhau) {
         this.hoKhau = hoKhau;
+    }
+    
+    public String getTenChuHo() {
+        return this.tenChuHo;
     }
     
 }

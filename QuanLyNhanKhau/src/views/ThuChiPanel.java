@@ -22,6 +22,7 @@ import views.ThuChiFrame.CacHoNoPhiJFrame;
 import views.ThuChiFrame.CacKhoanDongGopJFrame;
 import views.ThuChiFrame.NopTienJFrame;
 import views.ThuChiFrame.ThemKhoanDongGopJFrame;
+import views.ThuChiFrame.XemDuNoJFrame;
 
 /**
  *
@@ -61,6 +62,10 @@ public class ThuChiPanel extends javax.swing.JPanel {
         jLabel19 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
+        nhapTienDaThu = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        xemDuNo = new javax.swing.JPanel();
+        xemDuNolabel = new javax.swing.JLabel();
 
         setOpaque(false);
 
@@ -80,16 +85,14 @@ public class ThuChiPanel extends javax.swing.JPanel {
         jLabel19.setBackground(new java.awt.Color(255, 255, 255));
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("   ADD");
+        jLabel19.setText("   Thêm khoản thu");
         jLabel19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout addBtnLayout = new javax.swing.GroupLayout(addBtn);
         addBtn.setLayout(addBtnLayout);
         addBtnLayout.setHorizontalGroup(
             addBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addBtnLayout.createSequentialGroup()
-                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
         );
         addBtnLayout.setVerticalGroup(
             addBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,10 +107,69 @@ public class ThuChiPanel extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 405, Short.MAX_VALUE)
+            .addGap(0, 417, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(jPanel1);
+
+        nhapTienDaThu.setBackground(new java.awt.Color(102, 153, 255));
+        nhapTienDaThu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nhapTienDaThuMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                nhapTienDaThuMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                nhapTienDaThuMouseExited(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText(" Nhập khoản đã thu");
+
+        javax.swing.GroupLayout nhapTienDaThuLayout = new javax.swing.GroupLayout(nhapTienDaThu);
+        nhapTienDaThu.setLayout(nhapTienDaThuLayout);
+        nhapTienDaThuLayout.setHorizontalGroup(
+            nhapTienDaThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+        );
+        nhapTienDaThuLayout.setVerticalGroup(
+            nhapTienDaThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        xemDuNo.setBackground(new java.awt.Color(102, 153, 255));
+        xemDuNo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                xemDuNoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                xemDuNoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                xemDuNoMouseExited(evt);
+            }
+        });
+
+        xemDuNolabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        xemDuNolabel.setForeground(new java.awt.Color(255, 255, 255));
+        xemDuNolabel.setText("Xem danh sách dư nợ theo hộ khẩu");
+
+        javax.swing.GroupLayout xemDuNoLayout = new javax.swing.GroupLayout(xemDuNo);
+        xemDuNo.setLayout(xemDuNoLayout);
+        xemDuNoLayout.setHorizontalGroup(
+            xemDuNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(xemDuNoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(xemDuNolabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        xemDuNoLayout.setVerticalGroup(
+            xemDuNoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(xemDuNolabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -115,6 +177,10 @@ public class ThuChiPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(xemDuNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(nhapTienDaThu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
             .addGroup(layout.createSequentialGroup()
@@ -126,9 +192,12 @@ public class ThuChiPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(addBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(nhapTienDaThu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(xemDuNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(9, 9, 9)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -150,29 +219,54 @@ public class ThuChiPanel extends javax.swing.JPanel {
         this.addBtn.setBackground(new Color(102,153,255));
     }//GEN-LAST:event_addBtnMouseExited
 
-    //xu ly su kien chuot di vao jLabel
-    private void jLabelMouseEntered(javax.swing.JLabel jLabel){
-        jLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        Font font = jLabel.getFont();
-        Map attributes = font.getAttributes();
-        attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
-        jLabel.setFont(font.deriveFont(attributes));
-    }
-    //xu ly su kien chuot di khoi jLabel
-    private void jLabelMouseExited(javax.swing.JLabel jLabel){
-        Font font = jLabel.getFont();
-        Map attributes = font.getAttributes();
-        attributes.put(TextAttribute.UNDERLINE, -1);
-        jLabel.setFont(font.deriveFont(attributes));
-    }
+    private void nhapTienDaThuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nhapTienDaThuMouseClicked
+        // TODO add your handling code here:
+        NopTienJFrame nopTien = new NopTienJFrame(this.parentJFrame, this.thuChiController);
+        nopTien.setLocationRelativeTo(null);
+        nopTien.setResizable(false);
+        nopTien.setVisible(true);
+    }//GEN-LAST:event_nhapTienDaThuMouseClicked
+
+    private void nhapTienDaThuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nhapTienDaThuMouseEntered
+        // TODO add your handling code here:
+        this.nhapTienDaThu.setBackground(new Color(0,51,153));
+    }//GEN-LAST:event_nhapTienDaThuMouseEntered
+
+    private void nhapTienDaThuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nhapTienDaThuMouseExited
+        // TODO add your handling code here:
+          this.nhapTienDaThu.setBackground(new Color(102,153,255));
+    }//GEN-LAST:event_nhapTienDaThuMouseExited
+
+    private void xemDuNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseClicked
+        // TODO add your handling code here:
+        XemDuNoJFrame xemDuNo = new XemDuNoJFrame(this.parentJFrame, this.thuChiController);
+        xemDuNo.setLocationRelativeTo(null);
+        xemDuNo.setResizable(false);
+        xemDuNo.setVisible(true);
+    }//GEN-LAST:event_xemDuNoMouseClicked
+
+    private void xemDuNoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseEntered
+        // TODO add your handling code here:
+        this.xemDuNo.setBackground(new Color(0,51,153));
+    }//GEN-LAST:event_xemDuNoMouseEntered
+
+    private void xemDuNoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xemDuNoMouseExited
+        // TODO add your handling code here:
+        this.xemDuNo.setBackground(new Color(102,153,255));
+    }//GEN-LAST:event_xemDuNoMouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addBtn;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel nhapTienDaThu;
+    private javax.swing.JPanel xemDuNo;
+    private javax.swing.JLabel xemDuNolabel;
     // End of variables declaration//GEN-END:variables
 }

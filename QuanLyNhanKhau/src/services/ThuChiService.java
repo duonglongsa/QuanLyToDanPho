@@ -22,8 +22,8 @@ public class ThuChiService {
 
     private final QueryService qs = new QueryService();
     
-    public void themLoaiPhi(int maThu, String tenPhi, boolean batBuoc) throws SQLException {
-        String sql = String.format("INSERT INTO `thu_chi`(`maThuChi`, `tenLoaiPhi`, `batBuoc`) VALUES (%d,%s,%s)", maThu, tenPhi, batBuoc);
+    public void themLoaiPhi(int maThu, String tenPhi, int batBuoc) throws SQLException {
+        String sql = String.format("INSERT INTO thu_chi(maThuChi, tenLoaiPhi, batBuoc) VALUES ('"+maThu+"', '"+tenPhi+"', '"+batBuoc+"')");
         qs.queryNoResult(sql);
     }
     

@@ -12,6 +12,7 @@ import java.awt.event.WindowEvent;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import models.ThuChiModel;
@@ -47,8 +48,10 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
         this.thuChiService = new ThuChiService();
         this.setTitle("Thêm khoản đóng góp");
         parentFrame.setEnabled(false);
-        //this.controller = new 
-
+       
+        btnGroup.add(this.batBuoc);
+        btnGroup.add(this.tuNguyen);
+        
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -77,8 +80,8 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         tenSuKien = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        tuNguyen = new javax.swing.JRadioButton();
+        batBuoc = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,19 +109,19 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setText("Trạng thái:");
 
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton1.setText("Tự nguyện");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        tuNguyen.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tuNguyen.setText("Tự nguyện");
+        tuNguyen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                tuNguyenActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton2.setText("Bắt buộc");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        batBuoc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        batBuoc.setText("Bắt buộc");
+        batBuoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                batBuocActionPerformed(evt);
             }
         });
 
@@ -146,9 +149,9 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
                         .addComponent(tenSuKien, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
                         .addComponent(maThu))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jRadioButton2)
+                        .addComponent(batBuoc)
                         .addGap(42, 42, 42)
-                        .addComponent(jRadioButton1)))
+                        .addComponent(tuNguyen)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(252, Short.MAX_VALUE)
@@ -169,14 +172,14 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(tuNguyen)
+                    .addComponent(batBuoc))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19))
         );
 
-        jRadioButton1.getAccessibleContext().setAccessibleName("Bắt buộc");
+        tuNguyen.getAccessibleContext().setAccessibleName("Bắt buộc");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -200,19 +203,22 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         String maThu = this.maThu.getText();
         String tenSuKien = this.tenSuKien.getText();
+        int loaiPhi = this.batBuoc.isSelected() ? 1 : 0;
+        
         // TODO
         try {
-            this.thuChiService.themLoaiPhi(Integer.parseInt(maThu), tenSuKien, true);
+            this.thuChiService.themLoaiPhi(Integer.parseInt(maThu), tenSuKien, loaiPhi);
             this.parentController.refreshScrollPanel();
-            JOptionPane.showMessageDialog(null, "Thêm thành công!!");
-            close();
-            
-            
+            JOptionPane.showMessageDialog(null, "Thêm thành công!!!");
+            close();        
+        } catch(NumberFormatException nfe) {
+            Logger.getLogger(ThemKhoanDongGopJFrame.class.getName()).log(Level.SEVERE, null, nfe);
+            JOptionPane.showMessageDialog(null, "Vui lòng điền đầy đủ thông tin!!!");
         } catch (SQLException ex) {
             Logger.getLogger(ThemKhoanDongGopJFrame.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Something wrong!!!");
-        }
-    
+        } 
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void maThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maThuActionPerformed
@@ -220,13 +226,13 @@ public class ThemKhoanDongGopJFrame extends javax.swing.JFrame {
        
     }//GEN-LAST:event_maThuActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void batBuocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batBuocActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_batBuocActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void tuNguyenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tuNguyenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_tuNguyenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,14 +285,15 @@ catch (javax.swing.UnsupportedLookAndFeelException ex) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton batBuoc;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField maThu;
     private javax.swing.JTextField tenSuKien;
+    private javax.swing.JRadioButton tuNguyen;
     // End of variables declaration//GEN-END:variables
+    private ButtonGroup btnGroup = new ButtonGroup();
 }
